@@ -9,7 +9,7 @@ jobs:
         id: hello
         uses: actions/ros-noetic-deb-action@v1
         with:
-          who-to-greet: 'Melodic'
+          who-to-greet: 'Melodic Morenia'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
