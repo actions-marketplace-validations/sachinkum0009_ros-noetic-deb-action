@@ -5,11 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to say hello
     steps:
-      - name: Hello world action step
+      - name: Hello ROS
         id: hello
-        uses: actions/ros-noetic-deb-action@v1
+        uses: sachinkum0009/ros-noetic-deb-action@v1.2
         with:
-          who-to-greet: 'Melodic Morenia'
+          who-to-greet: 'Melodic and Noetic'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
