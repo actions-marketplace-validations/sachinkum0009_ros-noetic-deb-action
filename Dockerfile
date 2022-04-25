@@ -1,5 +1,6 @@
-FROM alpine:3.10
+FROM ghcr.io/sachinkum0009/ros-noetic-deb:main
 
-COPY entrypoint.sh /entrypoint.sh
+# ros entrypoint
+ADD ros_entrypoint.sh /ros_entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT [ "/ros_entrypoint.sh" ]
